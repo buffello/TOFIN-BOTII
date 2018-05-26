@@ -65,7 +65,7 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Video"
-    if($message == "wedding"){
+    else if($message == "wedding"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "My Wedding 6/5/59";
         $arrayPostData['messages'][0]['originalContentUrl'] = "https://www.youtube.com/watch?v=8jQ1uBPf-dk";//ใส่ url ของ video ที่ต้องการส่ง

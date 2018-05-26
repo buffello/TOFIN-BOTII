@@ -23,7 +23,6 @@
         $arrayPostData['messages'][0]['text'] = "ป้ามึงสิ..!!";
         replyMsg($arrayHeader,$arrayPostData);
     }
-    }
      else if($message == "เบอร์แม่แอน"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";

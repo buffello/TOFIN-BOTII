@@ -1,7 +1,9 @@
 <?php
-
-    echo "Hello LINE BOT";
-    $accessToken = "nUti9TekBwl7st0oLlcygSqX+B+QuBlXRBHH2q54EsAJmh94aIVfT4RpRmLDSJ9Hh7a3IQJbmLfSQ0hOlQE2KXSu9UqNFle34Ls4vQv4UfEBE8g0OKQGoGfcT0dJfffcpo/Tlygqbox33LogS/dHKQdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
+<?php
+echo "Hello LINE BOT";
+?>
+    
+    $accessToken = "bcj8wYHzFRPwfMdD+91AEmjmugfJzjkLl9QdfGqiMHYeCoSUd/A/uDPNSSJICa5Gh7a3IQJbmLfSQ0hOlQE2KXSu9UqNFle34Ls4vQv4UfGdf8JeIIvcrS081hGJiJFIu2A0ncsPg6XtGpLg1BiW5AdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
     
     $content = file_get_contents('php://input');
     $arrayJson = json_decode($content, true);

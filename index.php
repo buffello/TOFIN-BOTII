@@ -1,6 +1,6 @@
 <?php
 <?php
-echo "Hello LINE BOT";
+echo "Hello TOFIN AUTO BOT";
 ?>
     
     $accessToken = "bcj8wYHzFRPwfMdD+91AEmjmugfJzjkLl9QdfGqiMHYeCoSUd/A/uDPNSSJICa5Gh7a3IQJbmLfSQ0hOlQE2KXSu9UqNFle34Ls4vQv4UfGdf8JeIIvcrS081hGJiJFIu2A0ncsPg6XtGpLg1BiW5AdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่

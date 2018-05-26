@@ -39,9 +39,9 @@
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "location";
         $arrayPostData['messages'][0]['title'] = "Go to my home";
-        $arrayPostData['messages'][0]['address'] =   "13.8630683,100.4829692";
-        $arrayPostData['messages'][0]['latitude'] = "13.8630683";
-        $arrayPostData['messages'][0]['longitude'] = "100.4829692";
+        $arrayPostData['messages'][0]['address'] =   "13.9327221,100.5100917";
+        $arrayPostData['messages'][0]['latitude'] = "13.9327221";
+        $arrayPostData['messages'][0]['longitude'] = "100.5100917";
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Text + Sticker ใน 1 ครั้ง"

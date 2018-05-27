@@ -21,34 +21,34 @@ $isData=sizeof($data);
  echo print_r($data);
 
    //รับข้อความจากผู้ใช้
-    $message = $arrayJson['events'][0]['message']['text'];
+    $_msg = $arrayJson['events'][0]['message']['text'];
 #ตัวอย่าง Message Type "Text"
-    if($message == "สวัสดี"){
+    if($_msg == "สวัสดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
         replyMsg($arrayHeader,$arrayPostData);
     }
-     else if($message == "กวนตีนหรอ"){
+     else if($_msg == "กวนตีนหรอ"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ป้ามึงสิ..!!";
         replyMsg($arrayHeader,$arrayPostData);
     }
-	else if($message == "เบอร์แม่แอน"){
+	else if($_msg == "เบอร์แม่แอน"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "0957093326..!!";
         replyMsg($arrayHeader,$arrayPostData);
     }
-	else if($message == "เบอร์พ่อแอน"){
+	else if($_msg == "เบอร์พ่อแอน"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ป้ามึงสิ..!!";
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Sticker"
-    else if($message == "ฝันดี"){
+    else if($_msg == "ฝันดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "sticker";
         $arrayPostData['messages'][0]['packageId'] = "2";
@@ -56,7 +56,7 @@ $isData=sizeof($data);
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Image"
-    else if($message == "รูปน้องแมว"){
+    else if($_msg == "รูปน้องแมว"){
         $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
@@ -65,7 +65,7 @@ $isData=sizeof($data);
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Location"
-    else if($message == "Home"){
+    else if($_msg == "Home"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "location";
         $arrayPostData['messages'][0]['title'] = "Go to my home";
@@ -75,7 +75,7 @@ $isData=sizeof($data);
         replyMsg($arrayHeader,$arrayPostData);
     }
  #ตัวอย่าง Message Type "Location"
-    else if($message == "บ้านพี่แอ้"){
+    else if($_msg == "บ้านพี่แอ้"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "location";
         $arrayPostData['messages'][0]['title'] = "บ้านพี่แอ้";
@@ -85,7 +85,7 @@ $isData=sizeof($data);
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Text + Sticker ใน 1 ครั้ง"
-    else if($message == "ลาก่อน"){
+    else if($_msg == "ลาก่อน"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "อย่าทิ้งกันไป";
@@ -95,7 +95,7 @@ $isData=sizeof($data);
         replyMsg($arrayHeader,$arrayPostData);
     }
 	#ตัวอย่าง Message Type "Text + Sticker ใน 1 ครั้ง"
-    else if($message == "วันครบรอบแต่งงาน"){
+    else if($_msg == "วันครบรอบแต่งงาน"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "Aniversary";
@@ -105,7 +105,7 @@ $isData=sizeof($data);
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Video"
-    else if($message == "wedding"){
+    else if($_msg == "wedding"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "My Wedding 6/5/59";
         $arrayPostData['messages'][0]['originalContentUrl'] = "https://www.youtube.com/watch?v=8jQ1uBPf-dk";//ใส่ url ของ video ที่ต้องการส่ง

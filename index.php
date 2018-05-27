@@ -18,7 +18,7 @@ $json = file_get_contents('https://api.mlab.com/api/1/databases/tofin/collection
 $data = json_decode($json);
 $isData=sizeof($data);
  
- print_r($content );
+ print_r($json);
 
 if (strpos($_msg, 'สอนเป็ด') !== false) {
   if (strpos($_msg, 'สอนเป็ด') !== false) {

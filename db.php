@@ -11,7 +11,7 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 $_msg = $arrJson['events'][0]['message']['text'];
- 
+$api_key. = "Aj0wdX5i4p-Laj6t3JKSkQLnf9oVDtYu";
  
 $api_key="<MLAB APIKEY>";
 $url = 'https://api.mlab.com/api/databases/tofin/collections/linebot?apiKey='.$api_key.'';

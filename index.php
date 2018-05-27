@@ -19,50 +19,8 @@ $data = json_decode($json);
 $isData=sizeof($data);
  
  echo print_r($data);
- 
-if (strpos($_msg, 'สอน TOFIN') !== false) {
-  if (strpos($_msg, 'สอน TOFIN') !== false) {
-    $x_tra = str_replace("สอน TOFIN","", $_msg);
-    $pieces = explode("|", $x_tra);
-    $_question=str_replace("[","",$pieces[0]);
-    $_answer=str_replace("]","",$pieces[1]);
-    //Post New Data
-    $newData = json_encode(
-      array(
-        'question' => $_question,
-        'answer'=> $_answer
-      )
-    );
-    $opts = array(
-      'http' => array(
-          'method' => "POST",
-          'header' => "Content-type: application/json",
-          'content' => $newData
-       )
-    );
-    $context = stream_context_create($opts);
-    $returnValue = file_get_contents($url,false,$context);
-    $arrPostData = array();
-    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-    $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = 'ขอบคุณที่สอน TOFIN';
-  }
-}else{
-  if($isData >0){
-   foreach($data as $rec){
-    $arrPostData = array();
-    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-    $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = $rec->answer;
-   }
-  }else{
-    $arrPostData = array();
-    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-    $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = 'คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์:สอน[คำถาม|คำตอบ]';
-  }
-}
-    //รับข้อความจากผู้ใช้
+
+   //รับข้อความจากผู้ใช้
     $message = $arrayJson['events'][0]['message']['text'];
 #ตัวอย่าง Message Type "Text"
     if($message == "สวัสดี"){
@@ -153,8 +111,50 @@ if (strpos($_msg, 'สอน TOFIN') !== false) {
         $arrayPostData['messages'][0]['originalContentUrl'] = "https://www.youtube.com/watch?v=8jQ1uBPf-dk";//ใส่ url ของ video ที่ต้องการส่ง
         $arrayPostData['messages'][0]['previewImageUrl'] = "";//ใส่รูป preview ของ video
         replyMsg($arrayHeader,$arrayPostData);
-    }
- 
+    }  
+else if (strpos($_msg, 'TOFIN') !== false) {
+  if (strpos($_msg, 'TOFIN') !== false) {
+    $x_tra = str_replace("TOFIN","", $_msg);
+    $pieces = explode("|", $x_tra);
+    $_question=str_replace("[","",$pieces[0]);
+    $_answer=str_replace("]","",$pieces[1]);
+    //Post New Data
+    $newData = json_encode(
+      array(
+        'question' => $_question,
+        'answer'=> $_answer
+      )
+    );
+    $opts = array(
+      'http' => array(
+          'method' => "POST",
+          'header' => "Content-type: application/json",
+          'content' => $newData
+       )
+    );
+    $context = stream_context_create($opts);
+    $returnValue = file_get_contents($url,false,$context);
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "text";
+    $arrPostData['messages'][0]['text'] = 'ขอบคุณที่สอน TOFIN';
+  }
+}else{
+  if($isData >0){
+   foreach($data as $rec){
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "text";
+    $arrPostData['messages'][0]['text'] = $rec->answer;
+   }
+  }else{
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "text";
+    $arrPostData['messages'][0]['text'] = 'คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์:TOFIN[คำถาม|คำตอบ]';
+  }
+}
+
 $channel = curl_init();
 curl_setopt($channel, CURLOPT_URL,$strUrl);
 curl_setopt($channel, CURLOPT_HEADER, false);

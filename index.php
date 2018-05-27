@@ -29,10 +29,13 @@
         $arrayPostData['messages'][0]['text'] = "0957093326..!!";
         replyMsg($arrayHeader,$arrayPostData);
     }
-	else if($message == "เบอร์พ่อแอน"){
+	else if($message == "คำสั่ง"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "ป้ามึงสิ..!!";
+        $arrayPostData['messages'][0]['text'] = 
+		"Home
+		 สวัสดี
+		";
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Sticker"

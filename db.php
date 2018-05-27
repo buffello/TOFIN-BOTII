@@ -1,5 +1,5 @@
 <?php
-  echo "TEST DATA BASE";
+  echo "TEST DATA BASE\n";
 $strAccessToken = "bcj8wYHzFRPwfMdD+91AEmjmugfJzjkLl9QdfGqiMHYeCoSUd/A/uDPNSSJICa5Gh7a3IQJbmLfSQ0hOlQE2KXSu9UqNFle34Ls4vQv4UfGdf8JeIIvcrS081hGJiJFIu2A0ncsPg6XtGpLg1BiW5AdB04t89/1O/w1cDnyilFU=";
  
 $content = file_get_contents('php://input');
@@ -19,7 +19,7 @@ $json = file_get_contents('https://api.mlab.com/api/databases/tofin/collections/
 $data = json_decode($json);
 $isData=sizeof($data);
 
-echo print_r(\n\n$json);
+echo print_r($json);
  
 if (strpos($_msg, 'สอนเป็ด') !== false) {
   if (strpos($_msg, 'สอนเป็ด') !== false) {

@@ -15,7 +15,7 @@ $_msg = $arrJson['events'][0]['message']['text'];
  
 $api_key="<MLAB APIKEY>";
 $url = 'https://api.mlab.com/api/1/databases/tofin/collections/linebot?apiKey='.$api_key.'';
-$json = file_get_contents('http://data.tmd.go.th/api/WeatherToday/V1/?type=json');
+$json = file_get_contents('https://api.mlab.com/api/1/databases/tofin/collections/linebot?apiKey='.$api_key.'&q={"question":"'.$_msg.'"}');
 $data = json_decode($json);
 $isData=sizeof($data);
 

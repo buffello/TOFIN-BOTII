@@ -59,7 +59,7 @@ if (strpos($_msg, 'สอน TOFIN') !== false) {
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = 'คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์:    สอน TOFIN[คำถาม|คำตอบ]';
+    $arrPostData['messages'][0]['text'] = 'คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์:    สอน[คำถาม|คำตอบ]';
   }
 }
  

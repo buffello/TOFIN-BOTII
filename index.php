@@ -20,7 +20,6 @@ $isData=sizeof($data);
  
  echo print_r($data);
   if (strpos($_msg, 'TOFIN') !== false) {
-  if (strpos($_msg, 'TOFIN') !== false) {
     $x_tra = str_replace("TOFIN","", $_msg);
     $pieces = explode("|", $x_tra);
     $_question=str_replace("[","",$pieces[0]);
@@ -45,7 +44,6 @@ $isData=sizeof($data);
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
     $arrPostData['messages'][0]['text'] = 'ขอบคุณที่สอน TOFIN';
-  }
 }else{
   if($isData >0){
    foreach($data as $rec){

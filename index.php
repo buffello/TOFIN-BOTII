@@ -1,7 +1,6 @@
 <?php
  //echo "TOFIN LEARN";
-$strAccessToken = "bH+0Z2ZRiVxhB3YhHn3FaYUc8Poxm+5am6kSzgCX1Us+TKWNwBHZfY8jayBSIRxbQqqM34ISmRMVQ9T3gPoO/H6Z8PGdlLEavbisAZryzZOaJGIPlRWIASHR6n/6p1VSf0seWSEpfiR6VRscHJUCiQdB04t89/1O/w1cDnyilFU=
-";
+$strAccessToken = "bH+0Z2ZRiVxhB3YhHn3FaYUc8Poxm+5am6kSzgCX1Us+TKWNwBHZfY8jayBSIRxbQqqM34ISmRMVQ9T3gPoO/H6Z8PGdlLEavbisAZryzZOaJGIPlRWIASHR6n/6p1VSf0seWSEpfiR6VRscHJUCiQdB04t89/1O/w1cDnyilFU=";
  
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);

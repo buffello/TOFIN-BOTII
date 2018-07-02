@@ -1,6 +1,7 @@
 <?php
  //echo "TOFIN LEARN";
-$strAccessToken = "CnOCU/0KJzA80n77DcASpQEwXOfMasRazXoVFCnNRr9uSscaU/Hkhd7j+XJwbV8F3n53Ik6n3hv12ZPsr/s6O+ZejrThJLWeuGyRB2TkLnngoonk667qe/ya/s+FREHUbN4QYiX+NjKTnJf5CJIkAwdB04t89/1O/w1cDnyilFU=";
+$strAccessToken = "N/txFXTHNpYfooWOIv3pk5sqCO3vIC3O3u2zsxySzFS/2zihNfW1owTjaCdnwfsDQqqM34ISmRMVQ9T3gPoO/H6Z8PGdlLEavbisAZryzZMkmOFs8bVjws82OZKGPt5QFjLtPs/ROSrLTTqkZ0tTmAdB04t89/1O/w1cDnyilFU=
+";
  
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
@@ -20,7 +21,6 @@ $isData=sizeof($data);
  
  echo print_r($data);
 
-  if (strpos($_msg, 'TOFIN') !== false) {
   if (strpos($_msg, 'TOFIN') !== false) {
     $x_tra = str_replace("TOFIN","", $_msg);
     $pieces = explode("|", $x_tra);
@@ -46,7 +46,7 @@ $isData=sizeof($data);
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
     $arrPostData['messages'][0]['text'] = 'ขอบคุณที่สอน TOFIN';
-  }
+   
 }else{
   if($isData >0){
    foreach($data as $rec){
